@@ -36,13 +36,10 @@
 	};
 
 	cordova.addConstructor(function() {
-		if(!window.plugins) {
-			window.plugins = {};
-		}
-		if(!window.plugins.badge) {
-    		window.plugins.badge = new Badge();
-		}
+		if(!window.plugins) window.plugins = {};
+		window.plugins.badge = new Badge();
 	});
+	
 	
 })(window.cordova || window.Cordova);
 
