@@ -12,12 +12,9 @@
  *  - More information here:
  *     https://github.com/apache/incubator-cordova-ios/blob/master/guides/Cordova%20Plugin%20Upgrade%20Guide.md
  */
-(function(){
 
-	/* Get local ref to global PhoneGap/Cordova/cordova object for exec function.
-		- This increases the compatibility of the plugin. */
-	var cordovaRef = window.PhoneGap || window.Cordova || window.cordova; // old to new fallbacks
-
+ (function(cordova) {
+	
  	/*
   	 * This class exposes the iPhone 'icon badge' functionality to JavaScript
   	 * to add a number (with a red background) to each icon.
@@ -28,17 +25,17 @@
  	 * Positive integer sets the badge amount, 0 or negative removes it.
 	 */
 	Badge.prototype.set = function(options) {
-	    cordovaRef.exec("Badge.setBadge", options);
+	    cordova.exec("Badge.setBadge", options);
 	};
 
 	/**
 	 * Shorthand to set the badge to 0 and remove it.
 	 */
 	Badge.prototype.clear = function() {
-	    cordovaRef.exec("Badge.setBadge", 0);
+	    cordova.exec("Badge.setBadge", 0);
 	};
 
-	cordovaRef.addConstructor(function() {
+	cordova.addConstructor(function() {
 		if(!window.plugins) {
 			window.plugins = {};
 		}
@@ -47,4 +44,7 @@
 		}
 	});
 	
-})(); /* End of Temporary Scope. */
+})(window.cordova || window.Cordova);
+
+
+/* DEBUG */ window.console.log('badge.js loaded...');
