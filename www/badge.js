@@ -7,12 +7,6 @@
  *
  */
 
-/*
- * Temporary Scope to contain the plugin.
- *  - More information here:
- *     https://github.com/apache/incubator-cordova-ios/blob/master/guides/Cordova%20Plugin%20Upgrade%20Guide.md
- */
-
  (function(cordova) {
 	
  	/*
