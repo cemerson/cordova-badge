@@ -19,14 +19,14 @@
  	 * Positive integer sets the badge amount, 0 or negative removes it.
 	 */
 	Badge.prototype.set = function(options) {
-	    cordova.exec("Badge.setBadge", options);
+	    cordova.exec(null,null,"Badge.setBadge", options);
 	};
 
 	/**
 	 * Shorthand to set the badge to 0 and remove it.
 	 */
 	Badge.prototype.clear = function() {
-	    cordova.exec("Badge.setBadge", 0);
+	    cordova.exec(null,null, "Badge.setBadge", 0);
 	};
 
 	cordova.addConstructor(function() {
