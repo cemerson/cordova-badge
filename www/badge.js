@@ -26,7 +26,7 @@
 	 * Shorthand to set the badge to 0 and remove it.
 	 */
 	Badge.prototype.clear = function() {
-	    cordova.exec(null,null, "Badge.setBadge", 0);
+	    cordova.exec(null,null,"Badge.setBadge",0);
 	};
 
 	cordova.addConstructor(function() {
