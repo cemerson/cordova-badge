@@ -1,13 +1,12 @@
-cordova.define("org.apache.cordova.plugins.Badge.Badge", function(require, exports, module) {/*
-                                                                                              *  This code is adapted from the work of Michael Nachbaur
-                                                                                              *  by Simon Madine of The Angry Robot Zombie Factory
-                                                                                              *   - Converted to Cordova 1.6.1 by Joseph Stuhr.
-                                                                                              *  2012-04-19
-                                                                                              *  MIT licensed
-                                                                                              *
-                                                                                              */
-               
-               (function(cordova) {
+/*
+*  This code is adapted from the work of Michael Nachbaur
+*  by Simon Madine of The Angry Robot Zombie Factory
+*   - Converted to Cordova 1.6.1 by Joseph Stuhr.
+*  2012-04-19
+*  MIT licensed
+*
+*/               
+  (function(cordova) {
                 
                 /*
                  * This class exposes the iPhone 'icon badge' functionality to JavaScript
@@ -33,9 +32,9 @@ cordova.define("org.apache.cordova.plugins.Badge.Badge", function(require, expor
                                        if(!window.plugins) window.plugins = {};
                                        window.plugins.badge = new Badge();
                                        });
-                
-                
-                })(window.cordova || window.Cordova);
+                              
+})(window.cordova || window.Cordova);
                
                
-/* DEBUG */ window.console.log('badge.js loaded...');});
+/* DEBUG */ window.console.log('badge.js loaded...');
+
